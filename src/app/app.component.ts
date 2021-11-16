@@ -12,7 +12,6 @@ export class AppComponent {
 
   public buttonText: string = 'start';
   public buttonTogler: boolean = false;
-  public pause: boolean = true;
   public click$ = fromEvent(document, 'click');
   public counterHour: any = 0;
   public counterMin: any = 0;
@@ -64,15 +63,6 @@ export class AppComponent {
     this.buttonText = 'start';
   }
   public pauseCounter() {
-    // this.pause = !this.pause;
-    // setTimeout(() => {
-    //   this.pause = !this.pause;
-    // }, 300)
-    // if (this.pause) {
-    //   this.buttonTogler = false;
-    //   this.buttonText = 'start';
-    //   this.counterSecSubject.next({ pause: true });
-    // } 
     this.click$.pipe(
       buffer(
         this.click$.pipe(debounceTime(300))
