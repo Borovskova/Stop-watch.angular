@@ -1,0 +1,35 @@
+$light-color: rgb(214, 214, 230);
+$primary-color: rgb(62, 62, 172);
+$success-color:rgb(56, 187, 95);
+
+.wrapper {
+    max-width: 300px;
+    min-height: 100%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background: $light-color;
+
+    p {
+        color: $primary-color;
+        font-size: 30px;
+    }
+
+    button {
+        margin: 10px;
+        padding: 8px;
+        border-radius: 10px;
+        border: none;
+        font-size: 15px;
+        color: $light-color;
+        background: $primary-color;
+        opacity: 0.9;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+
+}
